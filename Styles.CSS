@@ -1,0 +1,356 @@
+html{
+    scroll-behavior: smooth;
+}
+/* start: navbar */
+body{
+    background-color: #faf3e0;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #eabf9f;
+    display: flex;
+    justify-content: flex-start;
+    height: 3em;
+    z-index: 100;
+}
+
+main{
+    padding-top: 3em;
+}
+
+.nb{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform .3s ease;
+}
+
+.logo{
+    width: 10em;
+    font-size: 2rem;
+    user-select: none;
+    color: #1e212d;
+    padding-left: .6em;
+    padding-right: 2em;
+}
+
+.nb-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nb-links li{
+    list-style: none;
+    transition: background-color .2s ease;
+}
+
+.nb-links li a{
+    text-decoration: none;
+    display: block;
+    height: 3em;
+    padding: .6em 2em;
+    color: #1e212d;
+}
+
+.nb-links li:hover {
+    background-color: #b68973;
+} 
+
+.nb-toggle{
+    display: none;
+}
+
+ @media (max-width: 600px) {
+
+    header{
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .nb{ 
+        transform-origin: top;
+        transform: scale(1,0);
+        background-color: #eabf9f;
+    }
+    .nb-links ul{
+        transition: opacity .15s ease;
+        flex-direction: column;
+        opacity: 0;
+    }
+
+    .nb-toggle:checked ~ .nb{
+        display: block;
+        transform: scale(1,1);
+    } 
+
+    .nb-toggle:checked ~ .nb .nb-links ul {
+        transition: opacity .25s ease .2s;
+        opacity: 1;
+    }
+    .nb-toggle-label {
+        user-select: none;
+        color:white;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0em;
+        right: 0;
+        width: 3em;
+        height: 2.9em;
+    }
+
+    .nb-toggle-label:hover{
+        cursor: pointer;
+    }
+
+    .toggle-button,
+    .toggle-button::before,
+    .toggle-button::after{
+
+        background-color: #1e212d;
+        width: 2em;
+        height: 3px;
+        border-radius: 3px;
+        display:block;
+        position: relative;
+    }
+
+    .toggle-button::before,
+    .toggle-button::after{
+        content: '';
+        position: absolute;
+    }
+
+    .toggle-button::before{
+        bottom: 9px;
+    }
+
+    .toggle-button::after{
+        top: 9px;
+    }
+} 
+
+/* end: navbar */
+/* ------------------------------------------------------------------------------------------------*/
+/* start: main */
+/* into */
+.intro{
+    font-size: 1.3em;
+    align-items: center;
+}
+p{
+    padding: 0 .3em;
+    font-size: 1.3em;
+
+}
+.line{
+    display: block;
+    align-items: center;
+    width: 98%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #2e3346;
+}
+/* ----------------------------------------------------------------------------------------------------------------------*/
+ /* Project-1: Form */
+
+form{
+    margin: auto;
+    background-image: linear-gradient(to bottom left, #eac09fb6, #b68973b6 );
+    padding: 10px;
+    border-radius: 12px;
+    color: #1e212d;
+}
+
+#form-password, #form-email, .form button{
+     width:100%;
+     position: relative;
+     display: block;
+     margin-bottom: 20px;
+ }
+
+.form legend{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+}
+
+#form-password, #form-email{
+     color: 1e212d;
+     outline: none;
+     box-shadow: none;
+     padding: 3px;
+     border-radius: 7px;
+     background-color: transparent;
+     border: 2px solid #1e212d;
+     transition: background-color .2s ease-out, border .2s ease-out;
+ }
+
+#form-email:hover, #form-password:hover{
+    background-color: #faf3e0;
+    border: 2px solid #1e212d;
+} 
+
+#form-email:focus, #form-password:focus{
+    background-color: #faf3e0;
+    border: 2px solid #1e212d;
+    
+}
+
+form label{
+    margin:0;
+}
+#password-toggle{
+    display: none;
+}
+#show-passoword-label:hover{
+    user-select: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.login-button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #1e212d;
+    letter-spacing: .1em;
+    border: 2px solid #1e212d;
+    border-radius: 1000px;
+    height: 2.5em;
+    transition: background-color .2s ease-out, border .2s ease-out;
+}
+
+.login-button:hover{
+    background-color: #1e212d;
+    color: #faf3e0;
+    border: 2px solid #1e212d;
+}
+
+
+
+/* end: Project-1: Form */
+/* ------------------------------------------------------------------------------------------------*/
+/* start: project-2: slider */
+
+.unclear{
+    background-color: #1e212d3d;
+    font-size: 1em;
+}
+
+@media (max-width: 600px){
+    .unclear{
+        display: none;
+    }
+}
+/* end: Project-2 Slider */
+/* ------------------------------------------------------------------------------------------------*/
+/*start: Project-3: Cards*/
+
+.card-text{
+    font-size: 1.1em;
+    color: transparent;
+    transition: color .8s ease; 
+}
+.container{
+    padding-top: 2rem;
+}
+
+.col{
+    margin-bottom: 20px;
+}
+
+.card-img-top{
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #eac09f;
+    height: 450px;
+}
+
+
+.card{
+    position: static;
+    background-image: linear-gradient(to bottom left, #eac09fd2, #b68973e8 );
+    border-radius: 10px 10px 0 0;
+    height: 452px;
+    transition: height .3s ease, transform .3s ease, box-shadow .3s, border-radius .4s ease-out;
+}
+
+.card-container{
+    height: 36em;
+}
+
+.card:hover {
+    height: 97%;
+    transform: scale(1.05);
+    box-shadow: -2px 10px 14px #47362b;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.card-title, .card-text{
+    user-select: none;
+}
+
+
+@media (max-width: 767px)
+{
+    .card{
+        
+        background-image: linear-gradient(to bottom left, #eac09fd2, #b68973e8 );
+        border-radius: 10px 10px 0 0;
+        height: 100% !important;
+        border-radius: 10px;
+        transition: height .3s ease, transform .3s ease, box-shadow 300ms !important;
+    }
+
+    .card-text{
+        color:#1e212d !important; 
+    }
+
+    .card-container{
+        height: 100% !important;
+    }
+
+    .card:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 0 20px #46342c !important;
+    }
+
+}
+/* end: Project-3: Cards*/
+/* ------------------------------------------------------------------------------------------------*/
+/* start: footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #1e212d;
+    color: #eabf9f;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+footer p{
+    display: block;
+    font-size: 1em;
+}
+.copy{
+    color: #b68973;
+    font-style: italic;
+}
+.copy:hover{
+    color: #eabf9f
+}
+.copy-confirm{
+    position: absolute;
+    margin-left: 1em;
+    display:none;
+
+}
+
+
+
+
+

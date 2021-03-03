@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQUERY -->
+    <script src="Assets/jquery-3.5.1.js"></script>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="Bootstrap CSS and JS/bootstrap.min.css"> 
+    <link rel="stylesheet" href="Styles.CSS">
+    
+    <title>Welcome!</title>
+</head>
+<body>
+
+<header>
+    
+    <h1 class="logo">LOGO</h1>
+    <label for="nb-toggle" class="nb-toggle-label" ><span class="toggle-button">  </span></label>
+    <input type="checkbox" id="nb-toggle" class="nb-toggle">
+    <nav class="nb">
+     <div class="nb-links">
+        <ul>
+            <li><a href="#project-1">Project-1</a></li>
+            <li><a href="#project-2">Project-2</a></li>
+            <li><a href="#project-3">Project-3</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    </nav>
+</header>
+
+<main>
+<section id="intro" class="intro">
+    <div class="container">
+        <p> Hey, My name is Ahmed, I'm training to be a front-end web developer 
+            this webpage will showcase some of my "skills" in: html, css, and javascript. 
+            Enjoy!</p>
+            <div class="line"> <span id="project-1"> </span> </div>
+
+    </div>
+</section>
+
+<section>
+<div class="container">
+        <h1>Project-1: Form</h1>
+        <p>a login form with validation of both email and password</p>
+        <div class='form row'>
+            <form class="col col-lg-4 col-md-6 col-sm-12"> 
+            <legend>Sign in</legend >  
+            <label for="form-email">Email:</label>
+            <input type="email" name="email" id="form-email" placeholder="email@example.com">
+            <label for="form-password"> Password:</label>
+            <input type="password" id="form-password" placeholder="8 Characters minimum">
+            <label id="show-passoword-label" for="password-toggle"> Show Password </label>
+            <input type="checkbox" id="password-toggle" onclick="showPassword()">
+            <button id="login" class="login-button" >Login</button>
+        </form>
+        </div>
+        <br>
+        <div class="line">
+        <span id="project-2"></span>
+        </div>
+        <br>
+ </div>
+</section>
+
+
+<section class='slider'>
+    <div class="container">
+        <h1> Project-2: Slider</h1>
+        <p>a slider with pictures from my favorite videogames (all taken by me ^_^)</p>
+        <div id="theCarousel" class="carousel slide" data-ride="carousel">
+            <ol class=carousel-indicators>
+                <li data-target="#theCarousel" data-slide-to="0" class="active"> </li>
+                <li data-target="#theCarousel" data-slide-to="1"> </li>
+                <li data-target="#theCarousel" data-slide-to="2"> </li>
+            </ol>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="Assets/SM.jpeg" alt="First slide">
+            <div class="slide1"></div>
+            <div class="carousel-caption"> 
+            <p class=unclear>Spider-Man</p>
+            </div>
+            </div>
+                <div class="carousel-item">
+                <img class="d-block w-100" src="Assets/GOW.jpeg" alt="Second slide">
+                <div class="slide2"></div>
+                <div class="carousel-caption"> 
+                <p class=unclear> God of War </p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img class="d-block w-100" src="Assets/GOT.jpeg" alt="Third slide">
+                <div class="slide3"></div>
+                <div class="carousel-caption"> 
+                <p class=unclear>  Ghost of Tsushima </p>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+         </div>
+    </div>
+        <br> <br>
+        <div class="line"> <span id="project-3"></span></div>
+        <br>
+    </div>
+</section> 
+
+<section>
+<div class="container">
+    <h1>Project-3: Cards</h1>
+    <p>a card display</p>
+    <div class="row card-container">
+        <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="card" >
+                <img src="Assets/cards1.jpg" class="card-img-top" >
+                <div class="card-body">
+                    <p class="card-text">I took this photo during a trip to Turkey, so incredibly beautiful.</p>
+               
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="card" >
+                <img src="Assets/cards2.jpg" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">yet another photo in Turkey, took this one in a marketplace near the beach.</p>
+                      
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="card">
+                <img src="Assets/cards3.jpeg" class="card-img-top">
+                <div class="card-body">
+                    
+                    <p class="card-text">saw this cat sleeping in my garage, and felt like I had to photograph it.</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+  </div>
+  <br>
+  <div class="line"> <span id="contact"></span></div>
+  <br>
+</div>
+</section>
+</main>
+
+<footer>
+    <p>You can Contact me by: </p>
+        <ul>
+        
+        <li>calling me at: <a class="copy" href="">07816967884</a> <span class="copy-confirm"> Copied!</span></li>
+        <li>emailing me at: <a class="copy" href="">ahmedapple417@gmail.com</a> <span class="copy-confirm"> Copied!</span></li>
+        </ul>
+        <p> all photos in this page were taken by me &copy;</p>
+</footer>
+    <!-- BOOTSTRAP JS -->
+    <script src="Bootstrap CSS and JS/bootstrap.min.js"></script>
+    <script src="Script.JS"></script>
+</body>
+</html>
